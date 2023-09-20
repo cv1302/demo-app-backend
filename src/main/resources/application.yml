@@ -1,0 +1,18 @@
+
+server:
+  port: 5001
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=demo_app
+    username : sa
+    password : Pwd@12345
+    driver-class : com.microsoft.sqlserver.jdbc.SQLServerDriver
+    dialect : org.hibernate.dialect.SQLServerDialect
+    initialization-mode : always
+    entityScan: com.example.demo.entities
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
